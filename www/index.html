@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" name="viewport">
+	<title>Kontrol Listrik</title>
+
+	<!-- css -->
+	<link href="css/base.min.css" rel="stylesheet">
+
+	<!-- css for doc -->
+	<link href="css/project.min.css" rel="stylesheet">
+	<script src="http://192.168.0.100/css/myclient.js"></script> 
+	
+	<!-- favicon -->
+	<!-- ... -->
+</head>
+<body class="page-brand" onload="bacastatus()">
+	<header class="header header-transparent header-waterfall">
+		<ul class="nav nav-list pull-left">
+			<li>
+				<a data-toggle="menu" href="#doc_menu">
+					<span class="icon icon-lg">menu</span>
+				</a>
+			</li>
+		</ul>
+		<a class="header-logo header-affix-hide margin-left-no margin-right-no" data-offset-top="213" data-spy="affix" href="index.html">Saklar @Khairizal</a>
+		<span class="header-logo header-affix margin-left-no margin-right-no" data-offset-top="213" data-spy="affix">Saklar @Khairizal</span>
+		<ul class="nav nav-list pull-right">
+			<li class="dropdown margin-right">
+				<a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
+					<span class="access-hide">Khairizal</span>
+					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/me.jpg"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">account_box</span>Profile Settings</a>
+					</li>
+					<li>
+						<a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">add_to_photos</span>Upload Photo</a>
+					</li>
+					<li>
+						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+	<nav aria-hidden="true" class="menu" id="doc_menu" tabindex="-1">
+		<div class="menu-scroll">
+		
+			<div class="menu-content">
+			<a class="menu-logo"  href="index.html"><b>Saklar</b></a>
+			<a class="waves-attach">------</a>
+			<a class="waves-attach">by @Khairizal</a><br>
+			<a class="waves-attach">------</a>
+			<a class="waves-attach">Version : 1.0</a><br>
+			<a class="waves-attach">---------------------------------------------</a>
+			<ul class="nav">
+					<li>
+						<a class="collapsed waves-attach" data-toggle="modal" href="#Tentang">Tentang</a>
+						<ul class="menu-collapse collapse" id="doc_menu_javascript">
+							<li>
+								<a class="waves-attach" href="ui-affix.html">Affix</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-collapse.html">Collapse</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-dropdown-menu.html">Dropdown</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-modal.html">Modals</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="ui-tab.html">Togglable Tabs</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="content">
+		<div class="content-heading">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+						<h1 class="heading">Kontrol Listrik</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+					<section class="content-inner margin-top-no">
+						<div class="card">
+							<div class="card-main">
+								<nav class="tab-nav margin-top-no">
+									<ul class="nav nav-justified">
+										<li class="active">
+											<a class="waves-attach" data-toggle="tab" href="#doc_tab_example_1">Kamar</a>
+										</li>
+										<li>
+											<a class="waves-attach" data-toggle="tab" href="#doc_tab_example_2">Ruang Tamu</a>
+										</li>
+										<li>
+											<a class="waves-attach" data-toggle="tab" href="#doc_tab_example_3">Teras</a>
+										</li>
+									</ul>
+								</nav>
+								<div class="card-inner">
+				<div class="tab-content .tab-nav-red">
+					<div class="tab-pane fade active in" id="doc_tab_example_1">
+						<!-- ISI TAB 1 -->
+						<!-- Saklar 1 -->
+						<div class="card">
+							<div class="card-main">
+								<div class="card-header card-action card-brand">
+									<div class="card-inner">
+										<h3 class="h5 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Saklar 1</h3>
+											<div class="col-xs-3 col-xx-6">
+												<label for="sw1">
+													<input class="access-hide" onclick="pencet('1')" type="checkbox" id="sw1" /><span class="switch-toggle"></span>On/Off
+												</label>
+											</div>
+										</div>
+									</div>
+								
+									<div class="col-xs-6 col-xx-6">
+										<div class="form-group">	
+											<p><div class="checkbox switch">
+												<label for="tmr1">
+													<input class="access-hide"  type="checkbox" onclick="pencet2('1')" id="tmr1" value="yes"><span class="switch-toggle"></span>Timer
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<span class="btn btn-flat btn-brand" id="time1" align="right">00:00-00:00</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<button class="btn btn-brand waves-attach waves-light" onclick="editTimer('time1')" >Edit Timer</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Saklar 2 -->
+							<div class="card ">
+							<div class="card-main ">
+								<div class="card-header header-green card-action card-brand ">
+									<div class="card-inner ">
+										<h3 class="h5 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Saklar 2</h3>
+											<div class="col-xs-3 col-xx-6">
+												<label for="sw2">
+													<input class="access-hide" onclick="pencet('2')" type="checkbox" id="sw2" /><span class="switch-toggle"></span>On/Off
+												</label>
+											</div>
+										</div>
+									</div>
+								
+									<div class="col-xs-6 col-xx-6">
+										<div class="form-group">	
+											<p><div class="checkbox switch">
+												<label for="tmr2">
+													<input class="access-hide"  type="checkbox" onclick="pencet2('2')" id="tmr2" value="yes"><span class="switch-toggle"></span>Timer
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<span class="btn btn-green btn-flat btn-brand" id="time2" align="right">00:00-00:00</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<button class="btn btn-green btn-brand waves-attach waves-light" onclick="editTimer('time2')" >Edit Timer</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Saklar 3 -->
+							<div class="card">
+							<div class="card-main">
+								<div class="card-header header-orange card-action card-brand">
+									<div class="card-inner">
+										<h3 class="h5 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Saklar 3</h3>
+											<div class="col-xs-3 col-xx-6">
+												<label for="sw3">
+													<input class="access-hide" onclick="pencet('3')" type="checkbox" id="sw3" /><span class="switch-toggle"></span>On/Off
+												</label>
+											</div>
+										</div>
+									</div>
+								
+									<div class="col-xs-6 col-xx-6">
+										<div class="form-group">	
+											<p><div class="checkbox switch">
+												<label for="tmr3">
+													<input class="access-hide"  type="checkbox" onclick="pencet2('3')" id="tmr3" value="yes"><span class="switch-toggle"></span>Timer
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<span class="btn btn-orange btn-flat btn-brand" id="time3" align="right">00:00-00:00</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<button class="btn btn-orange btn-brand waves-attach waves-light" onclick="editTimer('time3')" >Edit Timer</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+				
+										<div class="tab-pane fade" id="doc_tab_example_2">
+											<!-- ISI TAB 2 -->
+											<p>Untuk Tambahan Saklar diperlukan Modul Relay tambahan, dan odul tambahan untuk GPIO</p>
+										</div>
+										<div class="tab-pane fade" id="doc_tab_example_3">
+										<!-- ISI TAB 3 -->
+											<p>Untuk Tambahan Saklar diperlukan Modul Relay tambahan, dan odul tambahan untuk GPIO</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<p>Copyright Khairizal 2016</p>
+		</div>
+	</footer>
+	<div class="fbtn-container">
+		<div class="fbtn-inner">
+			<a class="fbtn fbtn-lg fbtn-brand-accent waves-attach waves-circle waves-light" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon">apps</span><span class="fbtn-sub icon">close</span></a>
+			<div class="fbtn-dropdown">
+				<a class="fbtn waves-attach waves-circle" href="https://github.com/Daemonite/material" target="_blank"><span class="fbtn-text">Fork me on GitHub</span><span class="icon">code</span></a>
+				<a class="fbtn fbtn-brand waves-attach waves-circle waves-light" href="https://twitter.com/daemonites" target="_blank"><span class="fbtn-text">Follow Daemon on Twitter</span><span class="icon">share</span></a>
+				<a class="fbtn fbtn-green waves-attach waves-circle" href="http://www.daemon.com.au/" target="_blank"><span class="fbtn-text">Visit Daemon Website</span><span class="icon">link</span></a>
+			</div>
+		</div>
+	</div>
+	
+	<div aria-hidden="true" class="modal modal-va-middle fade" id="Tentang" role="dialog" tabindex="-1">
+		<div class="modal-dialog modal-xs">
+			<div class="modal-content">
+			<div class="modal-heading">
+					<a class="modal-close" data-dismiss="modal">×</a>
+					<center> <h2 class="modal-title">Tentang</h2></center>
+				</div>
+				<div class="modal-inner">
+					<p>saklarku adalah aplikasi remote control untuk mengendalikan saklar/relay yang terhubung pada GPIO di perangkat berbasis OpenWRT. </p>
+					<p>Aplikasi ini dibuat untuk memenuhi tugas akhir </p>
+					<br>
+					<br>
+					<center> <a class="btn btn-brand  waves-attach waves-light">Copyright Khairizal 2016 -- Version : 1.0</a></center>
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/base.min.js"></script>
+
+	<!-- js for doc -->
+	<script src="js/project.min.js"></script>
+</body>
+</html>
