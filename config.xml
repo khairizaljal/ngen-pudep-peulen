@@ -7,12 +7,12 @@
   <author href="https://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
   <content src="index.html"/>
   
-  <icon src="www/res/icon/android/drawable-ldpi-icon.png" density="ldpi"/>
-  <icon src="www/res/icon/android/drawable-mdpi-icon.png" density="mdpi"/>
-  <icon src="www/res/icon/android/drawable-hdpi-icon.png" density="hdpi"/>
-  <icon src="www/res/icon/android/drawable-xhdpi-icon.png" density="xhdpi"/>
-  <icon src="www/res/icon/android/drawable-xxhdpi-icon.png" density="xxhdpi"/>
-  <icon src="www/res/icon/android/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+  <icon src="www/res/icon/android/drawable-ldpi-icon.png" gap:platform="android" gap:qualifier="ldpi" />
+  <icon src="www/res/icon/android/drawable-mdpi-icon.png" gap:platform="android" gap:qualifier="mdpi" />
+  <icon src="www/res/icon/android/drawable-hdpi-icon.png" gap:platform="android" gap:qualifier="hdpi" />
+  <icon src="www/res/icon/android/drawable-xhdpi-icon.png" gap:platform="android" gap:qualifier="xhdpi" />
+  <icon src="www/res/icon/android/drawable-xxhdpi-icon.png" gap:platform="android" gap:qualifier="xxhdpi" />
+  <icon src="www/res/icon/android/drawable-xxxhdpi-icon.png" gap:platform="android" gap:qualifier="xxxhdpi" />
   
   <engine name="android" spec="~4.1.1" />
   
