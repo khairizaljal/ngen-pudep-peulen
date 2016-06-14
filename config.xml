@@ -4,7 +4,7 @@
 		version="1.0.0">
   <name>Saklar @khairizal</name>
   <description>Aplikasi Saklar By Khairizal</description>
-  <author href="http://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
+  <author href="https://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
