@@ -11,7 +11,19 @@
 
 	<!-- css for doc -->
 	<link href="css/project.min.css" rel="stylesheet">
+	<!-- js -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/base.min.js"></script>
 	<script src="js/myclient.js"></script> 
+	<script>
+		$(document).ready(function(){
+		setInterval(function(){cache_clear()},5000);
+		});
+		function cache_clear()
+		{
+			window.location.reload(true);
+		}
+	</script>
 	
 	<!-- favicon -->
 	<!-- ... -->
@@ -287,10 +299,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- js -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/base.min.js"></script>
 
 	<!-- js for doc -->
 	<script src="js/project.min.js"></script>
