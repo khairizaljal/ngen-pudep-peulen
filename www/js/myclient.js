@@ -1,6 +1,7 @@
+var serverinduk="http://192.168.0.100"
 var enablepagar="true";
 function bacastatus(){
-    xmlhttpPost("GET","http://192.168.0.100/cgi-bin/ajax","status");  
+    xmlhttpPost("GET",serverinduk+"/cgi-bin/ajax","status");  
 }
 
 function xmlhttpPost(method,strURL,strQuery) {
@@ -41,7 +42,10 @@ function xmlhttpPost(method,strURL,strQuery) {
                  k=k+1;
                  
     }}
-    }            
+    } else {
+		var snackbarText=1;$("body").snackbar({
+			content:"Gagal Menyambung ke Server",show:function(){snackbarText++}})
+	}
 
     }
       self.xmlHttpReq.send(strQuery);
@@ -52,19 +56,19 @@ function w3_open() { alert("edit Timer");
 function pencet(param)
 {
   if (document.getElementById('sw'+param).checked == true){
-      xmlhttpPost("POST","http://192.168.0.100/cgi-bin/ajax","saklar=on&lampu="+param);
+      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=on&lampu="+param);
       document.getElementById('tmr'+param).checked=false;}
 
   else{
-      xmlhttpPost("POST","http://192.168.0.100/cgi-bin/ajax","saklar=off&lampu="+param);  
+      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=off&lampu="+param);  
       document.getElementById('tmr'+param).checked=false;}
 } 
 function pencet2(param)
 {
   if (document.getElementById('tmr'+param).checked == true){
-      xmlhttpPost("POST","http://192.168.0.100/cgi-bin/ajax","timer=on&lampu="+param);}
+      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","timer=on&lampu="+param);}
   else{
-      xmlhttpPost("POST","http://192.168.0.100/cgi-bin/ajax","timer=off&lampu="+param);}  
+      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","timer=off&lampu="+param);}  
 }
 
 function editTimer(param) {
@@ -73,7 +77,7 @@ function editTimer(param) {
     
     if (IN != null) {
          document.getElementById(param).innerHTML=IN;
-         xmlhttpPost("POST","http://192.168.0.100/cgi-bin/ajax","time=set&value="+IN+"&lampu="+param);
+         xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","time=set&value="+IN+"&lampu="+param);
     }
 }
 
@@ -81,7 +85,7 @@ function pagar(param){
    if(enablepagar=="true"){
     disablebtn();
     enablepagar="false";  
-    xmlhttpPost("POST","http://192.168.0.100/cgi-bin/ajax",param);}
+    xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax",param);}
 }
 function disablebtn(){
   document.getElementById("btnpagar1").className="w3-btn w3-disabled";
