@@ -1,9 +1,37 @@
+timeout_value = 6000; // 6 detik
 var serverinduk="http://192.168.0.100"
 var enablepagar="true";
+var ngng="e";
+function cekstatus(){
+	$.ajax({
+		url: serverinduk+'/cgi-bin/ajax',
+		type: 'GET',
+		data: '',
+		timeout: timeout_value,
+		success: function(data) {
+			if (ngng=="e"){
+				var snackbarText=1;$("body").snackbar({
+				content:"Sukses Menyambung ke Server",show:function(){snackbarText++}})
+				console.log('Tersambung ke server i');
+				ngng="s";
+			} else {
+				console.log('Tersambung ke server e');
+				
+			}
+		},
+		error: function() {
+			var snackbarText=1;$("body").snackbar({
+			content:"Gagal Menyambung ke Server",show:function(){snackbarText++}})
+			ngng="e";
+			console.log('gagal tersambung ke server'+ngng);
+			
+		}
+		});
+}
+
 function bacastatus(){
     xmlhttpPost("GET",serverinduk+"/cgi-bin/ajax","status");  
 }
-
 function xmlhttpPost(method,strURL,strQuery) {
     var xmlHttpReq = false;
     var self = this;
@@ -43,8 +71,7 @@ function xmlhttpPost(method,strURL,strQuery) {
                  
     }}
     } else {
-		var snackbarText=1;$("body").snackbar({
-			content:"Gagal Menyambung ke Server",show:function(){snackbarText++}})
+		//cekstatus();
 	}
 
     }
