@@ -25,12 +25,19 @@
 		{
 			bacastatus()
 		}
+		$(document).ready(function(){
+		setInterval(function(){stat()},7000);
+		});
+		function stat()
+		{
+			cekstatus()
+		}
 	</script>
 	<link rel="icon" 
       type="image/png" 
       href="icon.png" />
 </head>
-<body class="page-brand" onload="bacastatus()">
+<body class="page-brand" onload="bacastatus(),cekstatus()">
 	<header class="header header-transparent header-waterfall">
 		<ul class="nav nav-list pull-left">
 			<li>
