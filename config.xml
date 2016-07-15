@@ -9,11 +9,8 @@
   <description>Aplikasi Saklar By Khairizal</description>
   <author href="https://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
   <content src="index.html"/>
-  <access origin="*" />
   
   <preference name="permissions" value="none"/>
-  <preference name="android-build-tool" value="gradle" /> 
-  <gap:plugin name="cordova-plugin-admobpro" source="npm" />
   
   <icon src="www/img/hdpi.png" />
   <icon src="www/img/hdpi.png" gap:platform="android" gap:qualifier="ldpi" />
