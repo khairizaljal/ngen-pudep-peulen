@@ -9,7 +9,7 @@
   <description>Aplikasi Saklar By Khairizal</description>
   <author href="https://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
   <content src="index.html"/>
-  <preference name="permissions" value="none"/>
+  <access origin="*" />
   
   <icon src="www/img/hdpi.png" />
   <icon src="www/img/hdpi.png" gap:platform="android" gap:qualifier="ldpi" />
