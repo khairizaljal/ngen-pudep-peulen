@@ -9,7 +9,8 @@
   <description>Aplikasi Saklar By Khairizal</description>
   <author href="https://fb.com/khairizalr" email="khairizal@outlook.com">Khairizal</author>
   <content src="index.html"/>
-  
+  <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
+
   <icon src="www/img/hdpi.png" />
   <icon src="www/img/hdpi.png" gap:platform="android" gap:qualifier="ldpi" />
   <icon src="www/img/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
