@@ -1,6 +1,6 @@
+/* Code Create by KHAIRIZAL */
 timeout_value = 6000; // 6 detik
 var serverinduk="http://192.168.0.100"
-var enablepagar="true";
 var ngng="e";
 function cekstatus(){
 	$.ajax({
@@ -12,16 +12,17 @@ function cekstatus(){
 			if (ngng=="e"){
 				var snackbarText=1;$("body").snackbar({
 				content:"Sukses Menyambung ke Server",show:function(){snackbarText++}})
+				document.getElementById('loding_sambong').classList.add('el-loading-done');
 				console.log('Tersambung ke server i');
 				ngng="s";
 			} else {
-				console.log('Tersambung ke server e');
-				
+				console.log('Tersambung ke server e');				
 			}
 		},
 		error: function() {
 			var snackbarText=1;$("body").snackbar({
 			content:"Gagal Menyambung ke Server",show:function(){snackbarText++}})
+			document.getElementById('loding_sambong').classList.remove('el-loading-done');
 			ngng="e";
 			console.log('gagal tersambung ke server'+ngng);
 			

@@ -15,6 +15,7 @@ function cekstatus(){
 				var snackbarText=1;$("body").snackbar({
 				content:"Sukses Menyambung ke Server : "+kareng,show:function(){snackbarText++}})
 				console.log('Tersambung ke server i');
+				document.getElementById('loding_sambong').classList.add('el-loading-done');
 				ngng="s";
 			} else {
 				console.log('Tersambung ke server e');
@@ -24,6 +25,7 @@ function cekstatus(){
 		error: function() {
 			var snackbarText=1;$("body").snackbar({
 			content:"Gagal Menyambung ke Server : "+kareng,show:function(){snackbarText++}})
+			document.getElementById('loding_sambong').classList.remove('el-loading-done');
 			ngng="e";
 			console.log('gagal tersambung ke server'+ngng);
 			
