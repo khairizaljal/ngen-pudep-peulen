@@ -1,6 +1,6 @@
 timeout_value = 6000; // 6 detik
 var ulee="http://";
-var kareng="khairizalhotspot.ddns.net:99";
+var kareng="128.199.238.95:99";
 var serverinduk=ulee+kareng;
 var enablepagar="true";
 var ngng="e";
