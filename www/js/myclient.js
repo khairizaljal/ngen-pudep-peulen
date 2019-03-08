@@ -1,6 +1,6 @@
 /* Code Create by KHAIRIZAL */
 timeout_value = 6000; // 6 detik
-var serverinduk="http://192.168.0.100"
+var serverinduk="http://192.168.0.2"
 var ngng="e";
 function cekstatus(){
 	$.ajax({
@@ -55,7 +55,7 @@ function xmlhttpPost(method,strURL,strQuery) {
             var k=0;
             var T=status.substring(11,70);
             T=T.split(' ');
-            for (i = 1; i < 6; i++) {
+            for (i = 1; i < 5; i++) {
                  j=j+1
                  if (status[i]=="1"){
                       document.getElementById("sw"+i).checked = true;
