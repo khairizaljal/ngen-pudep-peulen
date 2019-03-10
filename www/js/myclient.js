@@ -57,11 +57,29 @@ function xmlhttpPost(method,strURL,strQuery) {
             T=T.split(' ');
             for (i = 1; i < 5; i++) {
                  j=j+1
-                 if (status[i]=="1"){
-                      document.getElementById("sw"+i).checked = true;
+                 if (status[1]=="1"){
+                      document.getElementById("sw1").checked = true;
                      }
                  else{
-                     document.getElementById("sw"+i).checked = false;
+                     document.getElementById("sw1").checked = false;
+                     }
+				if (status[2]=="1"){
+                      document.getElementById("sw2").checked = true;
+                     }
+                 else{
+                     document.getElementById("sw2").checked = false;
+                     }
+				if (status[3]=="1"){
+                      document.getElementById("sw3").checked = false;
+                     }
+                 else{
+                     document.getElementById("sw3").checked = true;
+                     }
+				if (status[4]=="1"){
+                      document.getElementById("sw4").checked = true;
+                     }
+                 else{
+                     document.getElementById("sw4").checked = false;
                      }
                  if (status[j]=="1"){
                      document.getElementById("tmr"+i).checked = true;}
@@ -81,7 +99,7 @@ function xmlhttpPost(method,strURL,strQuery) {
 
 function w3_open() { alert("edit Timer");
 }
-function pencet(param)
+/* function pencet(param)
 {
   if (document.getElementById('sw'+param).checked == true){
       xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=on&lampu="+param);
@@ -90,7 +108,7 @@ function pencet(param)
   else{
       xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=off&lampu="+param);  
       document.getElementById('tmr'+param).checked=false;}
-} 
+}  */
 function pencet2(param)
 {
   if (document.getElementById('tmr'+param).checked == true){
