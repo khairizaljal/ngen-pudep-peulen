@@ -1,6 +1,6 @@
 /* Code Create by KHAIRIZAL */
 timeout_value = 6000; // 6 detik
-var serverinduk="http://192.168.0.2"
+var serverinduk="http://192.168.1.1"
 var ngng="e";
 function cekstatus(){
 	$.ajax({

@@ -1,5 +1,5 @@
 var  ck1,ck2,ck3,ck4,ck5
-var serverinduk="http://192.168.0.2" 
+var serverinduk="http://192.168.1.1" 
  
 function init() {
 	ck1 = document.getElementById("sw1");
