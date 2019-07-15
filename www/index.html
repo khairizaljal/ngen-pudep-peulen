@@ -55,7 +55,7 @@
 					<span class="access-hide">Khairizal</span>
 					<span class="avatar avatar-sm"><img alt="alt text for John Smith avatar" src="images/users/me.jpg"></span>
 				</a>
-				<ul class="dropdown-menu">
+				<!-- <ul class="dropdown-menu">
 					<li>
 						<a class="padding-right-lg waves-attach" href="javascript:void(0)"><span class="icon icon-lg margin-right">account_box</span>Profile Settings</a>
 					</li>
@@ -65,7 +65,7 @@
 					<li>
 						<a class="padding-right-lg waves-attach" href="#"><span class="icon icon-lg margin-right">exit_to_app</span>Logout</a>
 					</li>
-				</ul>
+				</ul> -->
 			</li>
 		</ul>
 	</header>
@@ -176,7 +176,52 @@
 								</div>
 							</div>
 							<!-- Akhir Loooooddiiiinggg -->
-							
+						
+
+						<!-- Semua Saklar -->
+						<div class="card">
+							<div class="card-main">
+								<div class="card-header card-action card-orange">
+									<div class="card-inner">
+										<h3 class="h4 margin-bottom-no margin-top-no col-xs-3 col-xx-6">Semua Lampu</h3>
+											<div class="col-xs-3 col-xx-6">
+												<div class="onoffswitch">
+													<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="swall" onchange="penall(this)">
+													<label class="onoffswitch-label" for="swall">
+														<span class="onoffswitch-inner"></span>
+														<span class="onoffswitch-switch"></span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								
+									<div style="display: none;" class="col-xs-6 col-xx-6">
+										<div class="form-group">	
+											<p><div class="checkbox switch">
+												<label for="tmrall">
+													<input class="access-hide"  type="checkbox" onclick="pencetall('1')" id="tmrall" value="yes"><span class="switch-toggle"></span>Timer
+												</label>
+											</div>
+										</div>
+									</div>
+									<div style="display: none;" class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<span class="btn btn-flat btn-brand" id="timeall" align="right">00:00-00:00</span>
+											</div>
+										</div>
+									</div>
+									<div style="display: none;" class="col-xs-3 col-xx-6">
+										<div class="form-group">
+											<div class="checkbox switch">
+												<button class="btn btn-brand waves-attach waves-light" onclick="editTimer('timeall')" >Edit Timer</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
 						<!-- Saklar 1 -->
 						<div class="card">
 							<div class="card-main">

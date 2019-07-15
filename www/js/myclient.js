@@ -57,7 +57,14 @@ function xmlhttpPost(method,strURL,strQuery) {
             T=T.split(' ');
             for (i = 1; i < 5; i++) {
                  j=j+1
-                 if (status[1]=="1"){
+				 var stat = (status[1]=="1") && (status[2]=="1") && (status[3]=="0") && (status[4]=="1");
+				 if (stat){
+                      document.getElementById("swall").checked = true;
+                     }
+                 else{
+                     document.getElementById("swall").checked = false;
+                     }
+				if (status[1]=="1"){
                       document.getElementById("sw1").checked = true;
                      }
                  else{
@@ -95,54 +102,4 @@ function xmlhttpPost(method,strURL,strQuery) {
 
     }
       self.xmlHttpReq.send(strQuery);
-}
-
-function w3_open() { alert("edit Timer");
-}
-/* function pencet(param)
-{
-  if (document.getElementById('sw'+param).checked == true){
-      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=on&lampu="+param);
-      document.getElementById('tmr'+param).checked=false;}
-
-  else{
-      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","saklar=off&lampu="+param);  
-      document.getElementById('tmr'+param).checked=false;}
-}  */
-function pencet2(param)
-{
-  if (document.getElementById('tmr'+param).checked == true){
-      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","timer=on&lampu="+param);}
-  else{
-      xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","timer=off&lampu="+param);}  
-}
-
-function editTimer(param) {
-    var currenttmr=document.getElementById(param).innerHTML;
-    var IN = prompt("Masukkan Timer sesuai format",currenttmr);
-    
-    if (IN != null) {
-         document.getElementById(param).innerHTML=IN;
-         xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax","time=set&value="+IN+"&lampu="+param);
-    }
-}
-
-function pagar(param){
-   if(enablepagar=="true"){
-    disablebtn();
-    enablepagar="false";  
-    xmlhttpPost("POST",serverinduk+"/cgi-bin/ajax",param);}
-}
-function disablebtn(){
-  document.getElementById("btnpagar1").className="w3-btn w3-disabled";
-  document.getElementById("btnpagar2").className="w3-btn w3-disabled";
-  document.getElementById("btnpagar3").className="w3-btn w3-disabled";
-  document.getElementById("btnpagar4").className="w3-btn w3-disabled";
-}
-function enablebtn(){
-
-  document.getElementById("btnpagar1").className="w3-btn w3-dark-grey w3-border";
-  document.getElementById("btnpagar2").className="w3-btn w3-dark-grey w3-border";
-  document.getElementById("btnpagar3").className="w3-btn w3-dark-grey w3-border";
-  document.getElementById("btnpagar4").className="w3-btn w3-dark-grey w3-border";
 }
